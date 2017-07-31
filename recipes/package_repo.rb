@@ -29,7 +29,6 @@ case node['platform_family']
     end
   when 'amazon'
     pkg_version = "#{node['mongodb3']['version']}-1.amzn1" # ~FC019
-  end
 end
 
 # Setup default package repo url attribute for each platform family or platform
