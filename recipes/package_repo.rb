@@ -27,6 +27,9 @@ case node['platform_family']
     if node['platform'] == 'amazon'
       pkg_version = "#{node['mongodb3']['version']}-1.amzn1" # ~FC019
     end
+  when 'amazon'
+    pkg_version = "#{node['mongodb3']['version']}-1.amzn1" # ~FC019
+  end
 end
 
 # Setup default package repo url attribute for each platform family or platform
@@ -85,7 +88,7 @@ end
 
 # Add the MongoDB Package repository
 case node['platform_family']
-  when 'rhel', 'fedora'
+  when 'rhel', 'fedora', 'amazon'
     yum_repository "mongodb-org-#{pkg_major_version}" do
       description 'MongoDB Repository'
       baseurl node['mongodb3']['package']['repo']['url']

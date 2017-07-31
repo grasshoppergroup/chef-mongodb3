@@ -24,7 +24,7 @@ end
 
 # Set variables by platform
 case node['platform_family']
-  when 'rhel', 'fedora'
+  when 'rhel', 'fedora', 'amazon'
     mms_agent_source = 'https://cloud.mongodb.com/download/agent/monitoring/mongodb-mms-monitoring-agent-latest.x86_64.rpm'
     mms_agent_file = '/root/mongodb-mms-monitoring-agent-latest.x86_64.rpm'
   when 'debian'
@@ -45,7 +45,7 @@ end
 
 # Install package
 case node['platform_family']
-  when 'rhel', 'fedora'
+  when 'rhel', 'fedora', 'amazon'
     rpm_package 'mongodb-mms-monitoring-agent' do
       source mms_agent_file
       action :install
