@@ -5,8 +5,8 @@ license          'Apache 2.0'
 description      'Installs/Configures mongodb3'
 long_description 'Installs/Configures mongodb3'
 
-version '5.3.0'
-chef_version '>= 12', '< 14.0'
+version '0.0.1'
+chef_version '>= 12.7' if respond_to?(:chef_version)
 
 supports 'ubuntu', '>= 12.04'
 supports 'debian', '= 7.8'
