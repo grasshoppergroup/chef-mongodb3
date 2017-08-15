@@ -39,7 +39,7 @@ default['mongodb3']['package']['repo']['apt']['components'] = nil # eg. ['multiv
 
 # Default attribute for MongoDB installation
 case node['platform_family']
-  when 'rhel', 'fedora'
+  when 'rhel', 'fedora', 'amazon'
     mongo_user = 'mongod'
     mongo_group = 'mongod'
     mongo_dbpath = '/var/lib/mongo'
