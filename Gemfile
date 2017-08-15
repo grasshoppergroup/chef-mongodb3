@@ -9,6 +9,6 @@ group :integration do
 end
 
 group :test do
-  gem 'chef', '~> 12.7'
+  gem 'chef'
   gem 'rspec', '~> 3.1'
 end
