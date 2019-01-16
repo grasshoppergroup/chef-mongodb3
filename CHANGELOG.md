@@ -1,5 +1,13 @@
 # mongodb3 Cookbook CHANGELOG
 
+## 5.4.1
+
+* Removed pointless strict pins.
+
+## 5.4.0
+
+* Bruce amazon compat stuff (entry added after the fact)
+
 ## 5.3.0
 
 Thank you so much for your huge contribution on this release!
